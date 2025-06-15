@@ -8,6 +8,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import Solutions from "./pages/Solutions";
+import Industries from "./pages/Industries";
+import About from "./pages/About";
+import Pricing from "./pages/Pricing";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -42,12 +47,11 @@ const App = () => {
             <main className="flex-1 pt-16">
               <Routes>
                 <Route path="/" element={<Home />} />
-                {/* Placeholder routes for other pages */}
-                <Route path="/solutions" element={<NotFound />} />
-                <Route path="/industries" element={<NotFound />} />
-                <Route path="/about" element={<NotFound />} />
-                <Route path="/pricing" element={<NotFound />} />
-                <Route path="/contact" element={<NotFound />} />
+                <Route path="/solutions" element={<Solutions />} />
+                <Route path="/industries" element={<Industries />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/contact" element={<Contact />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

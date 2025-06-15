@@ -1,25 +1,32 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Shield, CreditCard, RotateCcw } from 'lucide-react';
+import { ArrowRight, Shield, CreditCard, RotateCcw, CheckCircle } from 'lucide-react';
 
 const FinalCTASection = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-[#2ecc71]/10 via-background to-[#D9CB04]/10">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Urgency Headline */}
-          <div className="inline-flex items-center bg-[#2ecc71]/10 border border-[#2ecc71]/20 rounded-full px-4 py-2 mb-6">
-            <span className="w-2 h-2 bg-[#2ecc71] rounded-full mr-2 animate-pulse"></span>
-            <span className="text-sm font-medium text-[#2ecc71]">Limited Time Offer</span>
+          {/* Risk-Free Badge */}
+          <div className="inline-flex items-center bg-[#2ecc71]/10 border border-[#2ecc71]/20 rounded-full px-6 py-3 mb-6">
+            <CheckCircle className="w-5 h-5 text-[#2ecc71] mr-2" />
+            <span className="text-lg font-semibold text-[#2ecc71]">TRY IT RISK FREE</span>
           </div>
 
+          {/* Main Headline */}
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
-            Last Chance: Book Your Free Demo
+            100% Money Back Guarantee
           </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            Only 2 Spots Left This Week
-          </p>
+          <h3 className="text-2xl md:text-3xl font-semibold text-[#2ecc71] mb-6">
+            Book Your Demo Today
+          </h3>
+          
+          {/* Urgency */}
+          <div className="inline-flex items-center bg-background/80 backdrop-blur-sm border border-border rounded-full px-4 py-2 mb-8">
+            <span className="w-2 h-2 bg-[#2ecc71] rounded-full mr-2 animate-pulse"></span>
+            <span className="text-sm font-medium text-foreground">Only 2 Spots Left This Week</span>
+          </div>
 
           {/* CTA Button */}
           <Button
@@ -34,18 +41,32 @@ const FinalCTASection = () => {
           </Button>
 
           {/* Trust Badges */}
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
-            <div className="flex items-center space-x-2 text-muted-foreground">
-              <Shield className="h-5 w-5 text-[#2ecc71]" />
-              <span className="text-sm">30-Day Money-Back Guarantee</span>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
+            <div className="flex flex-col items-center space-y-2 text-center">
+              <div className="w-16 h-16 bg-[#2ecc71]/10 rounded-full flex items-center justify-center">
+                <Shield className="h-8 w-8 text-[#2ecc71]" />
+              </div>
+              <div className="font-semibold text-foreground">30-Day Money-Back</div>
+              <div className="font-semibold text-foreground">Guarantee</div>
+              <div className="text-sm text-muted-foreground">Risk-free trial period</div>
             </div>
-            <div className="flex items-center space-x-2 text-muted-foreground">
-              <CreditCard className="h-5 w-5 text-[#2ecc71]" />
-              <span className="text-sm">Secure SSL Payments</span>
+            
+            <div className="flex flex-col items-center space-y-2 text-center">
+              <div className="w-16 h-16 bg-[#2ecc71]/10 rounded-full flex items-center justify-center">
+                <CreditCard className="h-8 w-8 text-[#2ecc71]" />
+              </div>
+              <div className="font-semibold text-foreground">Secure SSL</div>
+              <div className="font-semibold text-foreground">Payments</div>
+              <div className="text-sm text-muted-foreground">Bank-level encryption</div>
             </div>
-            <div className="flex items-center space-x-2 text-muted-foreground">
-              <RotateCcw className="h-5 w-5 text-[#2ecc71]" />
-              <span className="text-sm">Cancel Anytime</span>
+            
+            <div className="flex flex-col items-center space-y-2 text-center">
+              <div className="w-16 h-16 bg-[#2ecc71]/10 rounded-full flex items-center justify-center">
+                <RotateCcw className="h-8 w-8 text-[#2ecc71]" />
+              </div>
+              <div className="font-semibold text-foreground">Cancel</div>
+              <div className="font-semibold text-foreground">Anytime</div>
+              <div className="text-sm text-muted-foreground">No long-term contracts</div>
             </div>
           </div>
         </div>

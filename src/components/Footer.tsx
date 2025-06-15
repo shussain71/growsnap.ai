@@ -6,39 +6,43 @@ import { Facebook, Twitter, Linkedin, Instagram, Award, Shield, Zap } from 'luci
 const Footer = () => {
   return (
     <footer className="bg-background border-t border-border">
-      {/* Values Section */}
-      <div className="container mx-auto px-4 lg:px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div className="flex items-center space-x-3">
-            <div className="p-3 bg-[#2ecc71]/10 rounded-lg">
-              <Zap className="h-6 w-6 text-[#2ecc71]" />
+      {/* Values Section with Green Background */}
+      <div className="bg-[#2ecc71] py-12">
+        <div className="container mx-auto px-4 lg:px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="flex items-center space-x-3">
+              <div className="p-3 bg-white/20 rounded-lg">
+                <Zap className="h-6 w-6 text-white" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-white">Innovation</h3>
+                <p className="text-sm text-white/90">Cutting-edge AI solutions</p>
+              </div>
             </div>
-            <div>
-              <h3 className="font-semibold text-foreground">Innovation</h3>
-              <p className="text-sm text-muted-foreground">Cutting-edge AI solutions</p>
+            <div className="flex items-center space-x-3">
+              <div className="p-3 bg-white/20 rounded-lg">
+                <Shield className="h-6 w-6 text-white" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-white">Integrity</h3>
+                <p className="text-sm text-white/90">Transparent and reliable</p>
+              </div>
             </div>
-          </div>
-          <div className="flex items-center space-x-3">
-            <div className="p-3 bg-[#D9CB04]/10 rounded-lg">
-              <Shield className="h-6 w-6 text-[#D9CB04]" />
-            </div>
-            <div>
-              <h3 className="font-semibold text-foreground">Integrity</h3>
-              <p className="text-sm text-muted-foreground">Transparent and reliable</p>
-            </div>
-          </div>
-          <div className="flex items-center space-x-3">
-            <div className="p-3 bg-[#2ecc71]/10 rounded-lg">
-              <Award className="h-6 w-6 text-[#2ecc71]" />
-            </div>
-            <div>
-              <h3 className="font-semibold text-foreground">Excellence</h3>
-              <p className="text-sm text-muted-foreground">Delivering exceptional results</p>
+            <div className="flex items-center space-x-3">
+              <div className="p-3 bg-white/20 rounded-lg">
+                <Award className="h-6 w-6 text-white" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-white">Excellence</h3>
+                <p className="text-sm text-white/90">Delivering exceptional results</p>
+              </div>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Main Footer Content */}
+      {/* Main Footer Content */}
+      <div className="container mx-auto px-4 lg:px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company */}
           <div>
