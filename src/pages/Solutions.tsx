@@ -58,9 +58,9 @@ const Solutions = () => {
   const valueProps = [
     {
       icon: DollarSign,
-      title: 'Cost Savings',
-      value: '$1,856/mo',
-      description: 'Replace 10+ expensive tools with one solution at just $97/mo',
+      title: 'Monthly Savings',
+      value: 'Save $625/mo',
+      description: 'Replace 10+ expensive tools with one solution',
       color: '#2ecc71'
     },
     {
@@ -90,12 +90,6 @@ const Solutions = () => {
         
         <div className="container mx-auto px-4 lg:px-6 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
-            {/* Social Proof Badge */}
-            <div className="inline-flex items-center space-x-2 bg-background/80 backdrop-blur-sm border border-border rounded-full px-4 py-2 mb-6 animate-fade-in">
-              <Users className="h-4 w-4 text-[#2ecc71]" />
-              <span className="text-sm font-medium text-foreground">✨ Trusted by Over 600+ Businesses Nationwide</span>
-            </div>
-
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 animate-fade-in">
               Meet Your AI Enrollment & Support Team!
             </h1>
@@ -217,10 +211,10 @@ const Solutions = () => {
             <Button
               asChild
               size="lg"
-              className="bg-[#D9CB04] hover:bg-[#c4b504] text-black px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:shadow-2xl hover:shadow-[#D9CB04]/25 hover:scale-105 group"
+              className="bg-[#2ecc71] hover:bg-[#27ae60] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:shadow-2xl hover:shadow-[#2ecc71]/25 hover:scale-105 group"
             >
-              <a href="https://growsnap.ai/music-school-ai-demos" target="_blank" rel="noopener noreferrer">
-                🚀 Start Your AI Transformation Today
+              <a href="https://api.leadconnectorhq.com/widget/booking/mcyJevtz5l0UMpAH13ft" target="_blank" rel="noopener noreferrer">
+                📅 Book Your Free Strategy Call
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
