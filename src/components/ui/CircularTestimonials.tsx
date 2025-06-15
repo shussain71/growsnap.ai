@@ -16,9 +16,19 @@ interface Testimonial {
   src: string;
 }
 
+interface Colors {
+  name?: string;
+  designation?: string;
+  testimony?: string;
+  arrowBackground?: string;
+  arrowForeground?: string;
+  arrowHoverBackground?: string;
+}
+
 interface CircularTestimonialsProps {
   testimonials: Testimonial[];
   autoplay?: boolean;
+  colors?: Colors;
 }
 
 function calculateGap(width: number) {
@@ -35,6 +45,7 @@ function calculateGap(width: number) {
 export const CircularTestimonials = ({
   testimonials,
   autoplay = true,
+  colors = {},
 }: CircularTestimonialsProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [containerWidth, setContainerWidth] = useState(1200);
@@ -47,6 +58,14 @@ export const CircularTestimonials = ({
     () => testimonials[activeIndex],
     [activeIndex, testimonials]
   );
+
+  // Color config
+  const colorName = colors.name ?? "#000";
+  const colorDesignation = colors.designation ?? "#6b7280";
+  const colorTestimony = colors.testimony ?? "#4b5563";
+  const colorArrowBg = colors.arrowBackground ?? "#2ecc71";
+  const colorArrowFg = colors.arrowForeground ?? "#ffffff";
+  const colorArrowHoverBg = colors.arrowHoverBackground ?? "#27ae60";
 
   // Responsive gap calculation
   useEffect(() => {
@@ -145,27 +164,47 @@ export const CircularTestimonials = ({
         {/* Content */}
         <div className="flex flex-col justify-between">
           <div key={activeIndex} className="animate-fade-in">
-            <h3 className="text-2xl font-bold text-foreground mb-1">
+            <h3 className="text-2xl font-bold text-foreground mb-1" style={{ color: colorName }}>
               {activeTestimonial.name}
             </h3>
-            <p className="text-base text-[#2ecc71] mb-8 font-medium">
+            <p className="text-base mb-8 font-medium" style={{ color: colorDesignation }}>
               {activeTestimonial.designation}
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg leading-relaxed" style={{ color: colorTestimony }}>
               "{activeTestimonial.quote}"
             </p>
           </div>
           
           <div className="flex gap-6 pt-12 md:pt-0">
             <button
-              className="w-11 h-11 bg-[#2ecc71] hover:bg-[#27ae60] text-white rounded-full flex items-center justify-center transition-colors duration-300"
+              className="w-11 h-11 rounded-full flex items-center justify-center transition-colors duration-300"
+              style={{ 
+                backgroundColor: colorArrowBg,
+                color: colorArrowFg,
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = colorArrowHoverBg;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = colorArrowBg;
+              }}
               onClick={handlePrev}
               aria-label="Previous testimonial"
             >
               <ChevronLeft size={24} />
             </button>
             <button
-              className="w-11 h-11 bg-[#2ecc71] hover:bg-[#27ae60] text-white rounded-full flex items-center justify-center transition-colors duration-300"
+              className="w-11 h-11 rounded-full flex items-center justify-center transition-colors duration-300"
+              style={{ 
+                backgroundColor: colorArrowBg,
+                color: colorArrowFg,
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = colorArrowHoverBg;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = colorArrowBg;
+              }}
               onClick={handleNext}
               aria-label="Next testimonial"
             >

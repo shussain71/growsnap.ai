@@ -10,8 +10,11 @@ const ReputationSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             🏆 Why Businesses Trust GrowSnap AI
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl text-muted-foreground mb-4">
             Join hundreds of successful businesses that have transformed their growth
+          </p>
+          <p className="text-lg text-muted-foreground">
+            We serve 600+ businesses across diverse industries - from contractors and training companies to music schools and retail stores.
           </p>
         </div>
 
@@ -35,8 +38,7 @@ const ReputationSection = () => {
               ))}
             </div>
             <div className="text-2xl font-bold text-foreground mb-1">4.9/5</div>
-            <div className="text-sm text-muted-foreground mb-2">Google Reviews</div>
-            <div className="text-xs text-muted-foreground">Based on 150+ reviews</div>
+            <div className="text-sm text-muted-foreground">Google Reviews</div>
           </div>
 
           {/* Facebook Reviews */}
@@ -58,12 +60,19 @@ const ReputationSection = () => {
               ))}
             </div>
             <div className="text-2xl font-bold text-foreground mb-1">4.8/5</div>
-            <div className="text-sm text-muted-foreground mb-2">Facebook Reviews</div>
-            <div className="text-xs text-muted-foreground">Based on 89+ reviews</div>
+            <div className="text-sm text-muted-foreground">Facebook Reviews</div>
           </div>
 
           {/* Business Trust */}
-          <div className="bg-background rounded-2xl p-6 text-center shadow-lg border border-border transition-all duration-300 hover:scale-105">
+          <div 
+            className="bg-background rounded-2xl p-6 text-center shadow-lg border border-border transition-all duration-300 hover:scale-105 cursor-pointer"
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = '0 20px 40px #2ecc7120, 0 0 0 1px #2ecc7130';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = '';
+            }}
+          >
             <div className="flex justify-center mb-4">
               <div className="p-3 bg-[#2ecc71]/10 rounded-full">
                 <Shield className="h-8 w-8 text-[#2ecc71]" />
@@ -75,7 +84,15 @@ const ReputationSection = () => {
           </div>
 
           {/* Success Rate */}
-          <div className="bg-background rounded-2xl p-6 text-center shadow-lg border border-border transition-all duration-300 hover:scale-105">
+          <div 
+            className="bg-background rounded-2xl p-6 text-center shadow-lg border border-border transition-all duration-300 hover:scale-105 cursor-pointer"
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = '0 20px 40px #D9CB0420, 0 0 0 1px #D9CB0430';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = '';
+            }}
+          >
             <div className="flex justify-center mb-4">
               <div className="p-3 bg-[#D9CB04]/10 rounded-full">
                 <TrendingUp className="h-8 w-8 text-[#D9CB04]" />
@@ -96,7 +113,7 @@ const ReputationSection = () => {
             href="https://api.leadconnectorhq.com/widget/booking/mcyJevtz5l0UMpAH13ft" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 bg-[#2ecc71] hover:bg-[#27ae60] text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-xl hover:scale-105"
+            className="inline-flex items-center px-6 py-3 bg-[#2ecc71] hover:bg-[#27ae60] text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-xl hover:shadow-[#2ecc71]/25 hover:scale-105"
           >
             📅 Start Your Success Story Today
           </a>

@@ -32,10 +32,10 @@ const FeaturesOverviewSection = () => {
       <div className="container mx-auto px-4 lg:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            All The Features You Need In One Place
+            🛠️ All The Features You Need In One Place
           </h2>
           <p className="text-xl text-muted-foreground">
-            Say goodbye to scattered tools—GrowSnap AI has you covered!
+            👋 Say goodbye to scattered tools—GrowSnap AI has you covered!
           </p>
         </div>
 

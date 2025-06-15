@@ -22,12 +22,12 @@ const HeroSection = () => {
   const currentItem = animatedWords[currentWordIndex];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-4">
+    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-8">
       {/* Animated Background */}
       <AnimatedGradient />
       
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 lg:px-6 py-8">
+      <div className="relative z-10 container mx-auto px-4 lg:px-6">
         <div className="max-w-4xl mx-auto text-center">
           {/* Social Proof Badge */}
           <div className="inline-flex items-center space-x-2 bg-background/80 backdrop-blur-sm border border-border rounded-full px-4 py-2 mb-8">
