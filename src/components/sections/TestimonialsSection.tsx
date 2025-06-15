@@ -14,7 +14,7 @@ const TestimonialsSection = () => {
       quote: "Creating engaging social media content used to take hours every week. GrowSnap AI changed that overnight. Our follower count has grown by 25% in three months, and we've booked 15 new clients directly from social interactions. The AI posts feel authentic and drive real engagement.",
       name: "Sarah L.",
       designation: "Marketing Manager, SafeGuard Training",
-      src: "https://images.unsplash.com/photo-1494790108755-2616c2e4b2b9?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       quote: "As a small music school, we were losing students because we couldn't answer every call. Parents expect instant responses these days. GrowSnap AI handles inquiries 24/7, books lessons, and even sends SMS reminders. We've reduced no-shows by 40% and haven't missed a single lead since implementation.",

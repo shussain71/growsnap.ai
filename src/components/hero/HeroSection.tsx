@@ -9,7 +9,7 @@ const HeroSection = () => {
   const animatedWords = [
     { word: 'Lead', suffix: 'Again' },
     { word: 'Call', suffix: 'Again' },
-    { word: 'Opportunity', suffix: 'Ever' }
+    { word: 'Opportunity', suffix: 'Again' }
   ];
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const HeroSection = () => {
   const currentItem = animatedWords[currentWordIndex];
 
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-8">
+    <section className="relative min-h-[75vh] flex items-center justify-center overflow-hidden py-4">
       {/* Animated Background */}
       <AnimatedGradient />
       
@@ -30,13 +30,13 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 lg:px-6">
         <div className="max-w-4xl mx-auto text-center">
           {/* Social Proof Badge */}
-          <div className="inline-flex items-center space-x-2 bg-background/80 backdrop-blur-sm border border-border rounded-full px-4 py-2 mb-8">
+          <div className="inline-flex items-center space-x-2 bg-background/80 backdrop-blur-sm border border-border rounded-full px-4 py-2 mb-6">
             <Users className="h-4 w-4 text-[#2ecc71]" />
             <span className="text-sm font-medium text-foreground">✨ Trusted by Over 600+ Businesses Nationwide</span>
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4 leading-tight">
             Never Miss a{' '}
             <span 
               key={currentWordIndex}
@@ -50,11 +50,11 @@ const HeroSection = () => {
           </h1>
 
           {/* Sub-headline */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-3">
             🚀 Let AI Supercharge Your Growth
           </p>
           
-          <p className="text-2xl md:text-3xl font-semibold text-[#2ecc71] mb-8">
+          <p className="text-2xl md:text-3xl font-semibold text-[#2ecc71] mb-6">
             💰 Stop Losing Money - Start Winning Today!
           </p>
 
@@ -71,7 +71,7 @@ const HeroSection = () => {
           </Button>
 
           {/* Supporting Text */}
-          <p className="text-sm text-muted-foreground mt-6">
+          <p className="text-sm text-muted-foreground mt-4">
             🔥 Free demo • No commitment • See results in 30 days
           </p>
         </div>
