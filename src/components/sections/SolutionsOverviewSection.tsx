@@ -206,12 +206,21 @@ const SolutionsOverviewSection = () => {
                 <Button
                   asChild
                   size="lg"
-                  className="px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:shadow-xl hover:scale-105"
-                  style={{ backgroundColor: solution.color }}
+                  className="px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 group"
+                  style={{ 
+                    backgroundColor: solution.color,
+                    boxShadow: 'none'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.boxShadow = `0 20px 40px ${solution.color}40, 0 0 0 1px ${solution.color}50`;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.boxShadow = 'none';
+                  }}
                 >
                   <a href="https://api.leadconnectorhq.com/widget/booking/mcyJevtz5l0UMpAH13ft" target="_blank" rel="noopener noreferrer">
                     🚀 See {solution.title} in Action
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </Button>
               </div>

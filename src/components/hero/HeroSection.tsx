@@ -6,7 +6,11 @@ import AnimatedGradient from './AnimatedGradient';
 
 const HeroSection = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const animatedWords = ['Lead', 'Call', 'Opportunity'];
+  const animatedWords = [
+    { word: 'Lead', suffix: 'Again' },
+    { word: 'Call', suffix: 'Again' },
+    { word: 'Opportunity', suffix: 'Ever' }
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -15,18 +19,20 @@ const HeroSection = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const currentItem = animatedWords[currentWordIndex];
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-8">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-4">
       {/* Animated Background */}
       <AnimatedGradient />
       
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 lg:px-6 py-12">
+      <div className="relative z-10 container mx-auto px-4 lg:px-6 py-8">
         <div className="max-w-4xl mx-auto text-center">
           {/* Social Proof Badge */}
           <div className="inline-flex items-center space-x-2 bg-background/80 backdrop-blur-sm border border-border rounded-full px-4 py-2 mb-8">
             <Users className="h-4 w-4 text-[#2ecc71]" />
-            <span className="text-sm font-medium text-foreground">✨ Trusted by Over 200 Businesses Nationwide</span>
+            <span className="text-sm font-medium text-foreground">✨ Trusted by Over 600+ Businesses Nationwide</span>
           </div>
 
           {/* Main Headline */}
@@ -36,15 +42,11 @@ const HeroSection = () => {
               key={currentWordIndex}
               className="text-transparent bg-clip-text bg-gradient-to-r from-[#2ecc71] to-[#D9CB04] animate-fade-in"
             >
-              {animatedWords[currentWordIndex]}
+              {currentItem.word}
             </span>
-            {', '}
+            {' '}
             <br className="hidden sm:block" />
-            or{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2ecc71] to-[#D9CB04]">
-              Opportunity
-            </span>{' '}
-            Again
+            {currentItem.suffix}
           </h1>
 
           {/* Sub-headline */}

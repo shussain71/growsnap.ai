@@ -271,9 +271,10 @@ const CpuArchitecture = ({
             cx="5"
             cy="5"
             r="2"
-            fill="black"
-            stroke="#232323"
+            fill="currentColor"
+            stroke="currentColor"
             strokeWidth="0.5"
+            className="text-foreground"
           >
             {animateMarkers && (
               <animate attributeName="r" values="0; 3; 2" dur="0.5s" />
@@ -289,8 +290,8 @@ const CpuArchitecture = ({
           x2="0"
           y2="1"
         >
-          <stop offset="0%" stopColor="#4F4F4F" />
-          <stop offset="60%" stopColor="#121214" />
+          <stop offset="0%" stopColor="currentColor" className="text-muted-foreground" />
+          <stop offset="60%" stopColor="currentColor" className="text-foreground" />
         </linearGradient>
         
         {/* Add CPU Text Gradient */}

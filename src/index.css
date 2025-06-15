@@ -123,4 +123,64 @@
       transform: translateY(0);
     }
   }
+
+  /* Infinite scroll animation */
+  .animate-scroll-left {
+    animation: scrollLeft 40s linear infinite;
+  }
+  
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-33.333%);
+    }
+  }
+
+  /* CPU Architecture animations */
+  .cpu-line-1 {
+    animation: moveLine1 3s ease-in-out infinite;
+  }
+  
+  .cpu-line-2 {
+    animation: moveLine2 3s ease-in-out infinite 0.5s;
+  }
+  
+  .cpu-line-3 {
+    animation: moveLine3 3s ease-in-out infinite 1s;
+  }
+  
+  .cpu-line-4 {
+    animation: moveLine4 3s ease-in-out infinite 1.5s;
+  }
+  
+  .cpu-line-5 {
+    animation: moveLine5 3s ease-in-out infinite 2s;
+  }
+
+  @keyframes moveLine1 {
+    0%, 100% { transform: translateX(10px) translateY(20px); }
+    50% { transform: translateX(94.5px) translateY(55px); }
+  }
+  
+  @keyframes moveLine2 {
+    0%, 100% { transform: translateX(180px) translateY(10px); }
+    50% { transform: translateX(105.3px) translateY(45px); }
+  }
+  
+  @keyframes moveLine3 {
+    0%, 100% { transform: translateX(130px) translateY(20px); }
+    50% { transform: translateX(115px) translateY(46.8px); }
+  }
+  
+  @keyframes moveLine4 {
+    0%, 100% { transform: translateX(170px) translateY(80px); }
+    50% { transform: translateX(115px) translateY(53px); }
+  }
+  
+  @keyframes moveLine5 {
+    0%, 100% { transform: translateX(135px) translateY(65px); }
+    50% { transform: translateX(105.2px) translateY(60px); }
+  }
 }

@@ -1,6 +1,7 @@
 
 import React from 'react';
 import HeroSection from '@/components/hero/HeroSection';
+import StatsBar from '@/components/hero/StatsBar';
 import LeadMagnetSection from '@/components/sections/LeadMagnetSection';
 import SolutionsOverviewSection from '@/components/sections/SolutionsOverviewSection';
 import ReputationSection from '@/components/sections/ReputationSection';
@@ -14,6 +15,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       <HeroSection />
+      <StatsBar />
       <LeadMagnetSection />
       <SolutionsOverviewSection />
       <ReputationSection />

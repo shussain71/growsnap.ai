@@ -1,80 +1,105 @@
 
 import React from 'react';
-import { Star, Users, TrendingUp } from 'lucide-react';
+import { Star, Shield, Users, TrendingUp } from 'lucide-react';
 
 const ReputationSection = () => {
   return (
     <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4 lg:px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Content */}
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Effortlessly Scale Your Online Reputation
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                With GrowSnap AI, automate review requests and replies for Google and Facebook all in one platform, 
-                effortlessly boosting your rankings and protecting your reputation, just like 1,237+ SMBs. 
-                Managing your reviews and, most importantly, protecting your brand's reputation becomes a cinch!
-              </p>
-              
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#2ecc71] mb-2">1,237+</div>
-                  <div className="text-sm text-muted-foreground">SMBs Protected</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#D9CB04] mb-2">95%</div>
-                  <div className="text-sm text-muted-foreground">Review Response Rate</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#2ecc71] mb-2">4.8★</div>
-                  <div className="text-sm text-muted-foreground">Avg. Rating Boost</div>
-                </div>
-              </div>
-            </div>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            🏆 Why Businesses Trust GrowSnap AI
+          </h2>
+          <p className="text-xl text-muted-foreground">
+            Join hundreds of successful businesses that have transformed their growth
+          </p>
+        </div>
 
-            {/* Visual Elements */}
-            <div className="relative">
-              <div className="bg-gradient-to-br from-[#2ecc71]/10 to-[#D9CB04]/10 rounded-2xl p-8">
-                <div className="space-y-6">
-                  {/* Review Cards */}
-                  <div className="bg-background rounded-lg p-4 shadow-sm border border-border">
-                    <div className="flex items-center space-x-2 mb-2">
-                      <div className="flex text-[#D9CB04]">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="h-4 w-4 fill-current" />
-                        ))}
-                      </div>
-                      <span className="text-sm text-muted-foreground">Google Review</span>
-                    </div>
-                    <p className="text-sm text-foreground">"Amazing service! They responded instantly and solved our problem."</p>
-                  </div>
-                  
-                  <div className="bg-background rounded-lg p-4 shadow-sm border border-border">
-                    <div className="flex items-center space-x-2 mb-2">
-                      <div className="flex text-[#D9CB04]">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="h-4 w-4 fill-current" />
-                        ))}
-                      </div>
-                      <span className="text-sm text-muted-foreground">Facebook Review</span>
-                    </div>
-                    <p className="text-sm text-foreground">"Best investment we made for our business growth!"</p>
-                  </div>
-
-                  {/* Icons */}
-                  <div className="flex justify-center space-x-8 pt-4">
-                    <Users className="h-8 w-8 text-[#2ecc71]" />
-                    <TrendingUp className="h-8 w-8 text-[#D9CB04]" />
-                    <Star className="h-8 w-8 text-[#2ecc71]" />
-                  </div>
-                </div>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          {/* Google Reviews */}
+          <div 
+            className="bg-background rounded-2xl p-6 text-center shadow-lg border border-border transition-all duration-300 hover:scale-105 cursor-pointer"
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = '0 20px 40px #4285f420, 0 0 0 1px #4285f430';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = '';
+            }}
+          >
+            <div className="flex justify-center mb-4">
+              <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google" className="h-8 w-8" />
             </div>
+            <div className="flex justify-center mb-2">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+              ))}
+            </div>
+            <div className="text-2xl font-bold text-foreground mb-1">4.9/5</div>
+            <div className="text-sm text-muted-foreground mb-2">Google Reviews</div>
+            <div className="text-xs text-muted-foreground">Based on 150+ reviews</div>
           </div>
+
+          {/* Facebook Reviews */}
+          <div 
+            className="bg-background rounded-2xl p-6 text-center shadow-lg border border-border transition-all duration-300 hover:scale-105 cursor-pointer"
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = '0 20px 40px #1877f220, 0 0 0 1px #1877f230';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = '';
+            }}
+          >
+            <div className="flex justify-center mb-4">
+              <div className="h-8 w-8 bg-[#1877f2] rounded-full flex items-center justify-center text-white font-bold text-sm">f</div>
+            </div>
+            <div className="flex justify-center mb-2">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+              ))}
+            </div>
+            <div className="text-2xl font-bold text-foreground mb-1">4.8/5</div>
+            <div className="text-sm text-muted-foreground mb-2">Facebook Reviews</div>
+            <div className="text-xs text-muted-foreground">Based on 89+ reviews</div>
+          </div>
+
+          {/* Business Trust */}
+          <div className="bg-background rounded-2xl p-6 text-center shadow-lg border border-border transition-all duration-300 hover:scale-105">
+            <div className="flex justify-center mb-4">
+              <div className="p-3 bg-[#2ecc71]/10 rounded-full">
+                <Shield className="h-8 w-8 text-[#2ecc71]" />
+              </div>
+            </div>
+            <div className="text-2xl font-bold text-foreground mb-1">600+</div>
+            <div className="text-sm text-muted-foreground mb-2">Businesses Trust Us</div>
+            <div className="text-xs text-muted-foreground">Growing daily</div>
+          </div>
+
+          {/* Success Rate */}
+          <div className="bg-background rounded-2xl p-6 text-center shadow-lg border border-border transition-all duration-300 hover:scale-105">
+            <div className="flex justify-center mb-4">
+              <div className="p-3 bg-[#D9CB04]/10 rounded-full">
+                <TrendingUp className="h-8 w-8 text-[#D9CB04]" />
+              </div>
+            </div>
+            <div className="text-2xl font-bold text-foreground mb-1">98%</div>
+            <div className="text-sm text-muted-foreground mb-2">Success Rate</div>
+            <div className="text-xs text-muted-foreground">Client satisfaction</div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-12">
+          <p className="text-lg text-muted-foreground mb-6">
+            🚀 Ready to join the success stories?
+          </p>
+          <a 
+            href="https://api.leadconnectorhq.com/widget/booking/mcyJevtz5l0UMpAH13ft" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-6 py-3 bg-[#2ecc71] hover:bg-[#27ae60] text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-xl hover:scale-105"
+          >
+            📅 Start Your Success Story Today
+          </a>
         </div>
       </div>
     </section>
