@@ -118,23 +118,9 @@ const About = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Section 1: The Hook */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        {/* Background Image with Better Overlay */}
-        <div 
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: "url('/lovable-uploads/3d5e494e-a162-499b-a943-f39f4e03d854.png')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}
-        >
-          {/* Improved overlay for better text readability */}
-          <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/80"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/50"></div>
-        </div>
-
-        {/* Floating Elements with Animation */}
+      {/* Section 1: Enhanced Hero Section */}
+      <section className="relative py-20 bg-gradient-to-br from-[#2ecc71]/10 via-background to-[#D9CB04]/10 overflow-hidden">
+        {/* Floating Elements */}
         <div className="absolute top-1/4 left-1/4 animate-bounce delay-100">
           <div className="text-2xl">📞</div>
         </div>
@@ -155,18 +141,18 @@ const About = () => {
         </div>
 
         <div className="container mx-auto px-4 lg:px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center text-white">
-            <h1 className="text-4xl md:text-6xl font-bold mb-8 animate-fade-in leading-tight text-shadow-lg">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-8 animate-fade-in leading-tight text-foreground">
               You Didn't Start a Business to Get Buried in Busywork.
             </h1>
-            <div className="text-xl md:text-2xl leading-relaxed animate-fade-in space-y-6 text-shadow">
-              <p className="backdrop-blur-sm bg-black/20 rounded-lg p-6 border border-white/10">
-                The phone rings while you're with a client. A new lead fills out the form on your website. 
+            <div className="text-xl md:text-2xl leading-relaxed animate-fade-in space-y-6 text-muted-foreground">
+              <p className="backdrop-blur-sm bg-background/80 rounded-lg p-6 border border-border">
+                📞 The phone rings while you're with a client. A new lead fills out the form on your website. 
                 A message comes in on Facebook. Another on Instagram. By the end of the day, you've lost track 
                 of who to follow up with, your passion is drained by administrative chaos, and you're leaving money on the table.
               </p>
-              <p className="backdrop-blur-sm bg-black/20 rounded-lg p-6 border border-white/10">
-                This is the daily grind for millions of small business owners. You have the skill, the drive, 
+              <p className="backdrop-blur-sm bg-background/80 rounded-lg p-6 border border-border">
+                💼 This is the daily grind for millions of small business owners. You have the skill, the drive, 
                 and the vision, but you're being held back by the sheer complexity of modern client acquisition and management.
               </p>
             </div>
@@ -176,19 +162,27 @@ const About = () => {
 
       {/* Section 2: The Turning Point */}
       <section className="py-20 bg-gradient-to-br from-background via-muted/20 to-background">
-        <div className="container mx-auto px-4 lg:px-6">
+        {/* Floating Elements */}
+        <div className="absolute left-1/4 animate-bounce delay-200">
+          <div className="text-xl">💡</div>
+        </div>
+        <div className="absolute right-1/4 animate-bounce delay-600">
+          <div className="text-lg">🚀</div>
+        </div>
+
+        <div className="container mx-auto px-4 lg:px-6 relative">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 animate-fade-in">
-              We Believe Your Passion Deserves Profit, Not Paperwork.
+              💯 We Believe Your Passion Deserves Profit, Not Paperwork.
             </h2>
             <div className="text-xl text-muted-foreground leading-relaxed animate-fade-in space-y-6">
               <p>
-                After more than a decade in the tech world, our founder saw this frustrating disconnect everywhere: 
+                🔧 After more than a decade in the tech world, our founder saw this frustrating disconnect everywhere: 
                 the most powerful automation tools were reserved for big corporations, while small businesses were 
                 left to fend for themselves with a dozen different apps that didn't talk to each other.
               </p>
               <p>
-                GrowSnap AI was founded on a simple belief: the power of AI and automation shouldn't just be for the giants. 
+                🎯 GrowSnap AI was founded on a simple belief: the power of AI and automation shouldn't just be for the giants. 
                 Our mission is to provide you with a single, elegant system that handles the repetitive work, 
                 so you can focus on the work you love.
               </p>
@@ -198,14 +192,22 @@ const About = () => {
       </section>
 
       {/* Section 3: The Proof */}
-      <section id="stats-section" className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4 lg:px-6">
+      <section id="stats-section" className="py-20 bg-muted/30 relative overflow-hidden">
+        {/* Floating Elements */}
+        <div className="absolute top-1/4 left-1/6 animate-bounce delay-300">
+          <div className="text-xl">📊</div>
+        </div>
+        <div className="absolute bottom-1/4 right-1/6 animate-bounce delay-800">
+          <div className="text-lg">💪</div>
+        </div>
+
+        <div className="container mx-auto px-4 lg:px-6 relative z-10">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-center animate-fade-in">
-              From Daily Grind to Sustainable Growth.
+              📈 From Daily Grind to Sustainable Growth.
             </h2>
             <p className="text-xl text-muted-foreground text-center mb-12 animate-fade-in">
-              Today, over 200 businesses use the GrowSnap AI system to automate their growth and reclaim their freedom.
+              🎉 Today, over 200 businesses use the GrowSnap AI system to automate their growth and reclaim their freedom.
             </p>
 
             {/* Animated Stats Cards */}
@@ -240,7 +242,7 @@ const About = () => {
 
             {/* Case Studies */}
             <div className="mb-8">
-              <h3 className="text-2xl font-bold text-foreground mb-8 text-center">This isn't just theory. It's a proven impact:</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-8 text-center">🔥 This isn't just theory. It's a proven impact:</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {caseStudies.map((study, index) => (
                   <GlowCard key={index} className="p-6 text-center">
@@ -261,14 +263,22 @@ const About = () => {
       </section>
 
       {/* Section 4: Guiding Principles */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 lg:px-6">
+      <section className="py-20 relative overflow-hidden">
+        {/* Floating Elements */}
+        <div className="absolute top-1/3 left-1/5 animate-bounce delay-400">
+          <div className="text-xl">🏆</div>
+        </div>
+        <div className="absolute bottom-1/3 right-1/5 animate-bounce delay-900">
+          <div className="text-lg">🌟</div>
+        </div>
+
+        <div className="container mx-auto px-4 lg:px-6 relative z-10">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-12 text-center animate-fade-in">
-              Our Guiding Principles
+              🎯 Our Guiding Principles
             </h2>
             <p className="text-xl text-muted-foreground text-center mb-12 animate-fade-in">
-              Our commitment to your success is driven by a core set of values. This is what we stand for:
+              💪 Our commitment to your success is driven by a core set of values. This is what we stand for:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {guiding_principles.map((principle, index) => (
@@ -289,11 +299,19 @@ const About = () => {
       </section>
 
       {/* Section 5: Founder's Note */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4 lg:px-6">
+      <section className="py-20 bg-muted/30 relative overflow-hidden">
+        {/* Floating Elements */}
+        <div className="absolute top-1/4 left-1/6 animate-bounce delay-500">
+          <div className="text-xl">👨‍💼</div>
+        </div>
+        <div className="absolute bottom-1/4 right-1/6 animate-bounce delay-1000">
+          <div className="text-lg">✨</div>
+        </div>
+
+        <div className="container mx-auto px-4 lg:px-6 relative z-10">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-12 text-center animate-fade-in">
-              A Message from Our Founder
+              💬 A Message from Our Founder
             </h2>
             <GlowCard className="p-8 md:p-12">
               <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -307,12 +325,12 @@ const About = () => {
                 <div className="lg:w-2/3">
                   <div className="text-muted-foreground leading-relaxed text-lg mb-8">
                     <p className="mb-6">
-                      After more than a decade in the digital marketing and SaaS worlds, I saw the same frustrating 
+                      🔧 After more than a decade in the digital marketing and SaaS worlds, I saw the same frustrating 
                       story play out over and over again: the most powerful automation and AI tools were being built 
                       for big corporations with deep pockets.
                     </p>
                     <p>
-                      I founded GrowSnap AI on a simple, powerful belief: the power of automation shouldn't just be 
+                      🎯 I founded GrowSnap AI on a simple, powerful belief: the power of automation shouldn't just be 
                       for the giants. My mission isn't to sell you "AI"; it's to give you back your time. It's to 
                       build you a simple, powerful system that finds your next customer, answers the phone when you're 
                       busy, and follows up with leads so you don't have to.
@@ -320,7 +338,7 @@ const About = () => {
                   </div>
                   
                   <blockquote className="text-2xl font-semibold text-foreground border-l-4 border-[#2ecc71] pl-6 mb-6 italic">
-                    "Technology should empower, not replace. We automate the repetitive so you can focus on strategy and growth."
+                    "💡 Technology should empower, not replace. We automate the repetitive so you can focus on strategy and growth."
                   </blockquote>
                   
                   <div className="text-right">
@@ -335,25 +353,22 @@ const About = () => {
       </section>
 
       {/* Section 6: Final CTA */}
-      <section className="py-20 relative overflow-hidden">
-        {/* Background with proper contrast */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-800"></div>
-        
-        {/* Subtle pattern overlay */}
-        <div 
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }}
-        ></div>
+      <section className="py-20 bg-gradient-to-br from-[#2ecc71]/10 via-background to-[#D9CB04]/10 relative overflow-hidden">
+        {/* Floating Elements */}
+        <div className="absolute top-1/4 left-1/6 animate-bounce delay-600">
+          <div className="text-xl">🚀</div>
+        </div>
+        <div className="absolute bottom-1/4 right-1/6 animate-bounce delay-1100">
+          <div className="text-lg">💰</div>
+        </div>
 
         <div className="container mx-auto px-4 lg:px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 animate-fade-in text-white">
-              Ready to Automate Your Growth?
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 animate-fade-in text-foreground">
+              🚀 Ready to Automate Your Growth?
             </h2>
-            <p className="text-xl md:text-2xl mb-12 animate-fade-in text-gray-200">
-              Discover how GrowSnap AI can transform your business in a matter of weeks.
+            <p className="text-xl md:text-2xl mb-12 animate-fade-in text-muted-foreground">
+              ✨ Discover how GrowSnap AI can transform your business in a matter of weeks.
             </p>
             
             <GlowCard className="inline-block" glowColor="#2ecc71">
