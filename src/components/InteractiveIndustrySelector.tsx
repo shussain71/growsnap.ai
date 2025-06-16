@@ -2,9 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import { 
   Music, Store, Calculator, Heart, Users, Dumbbell, 
-  Sword, Car, Cog, Flask, Zap, Wind, BookOpen, 
+  Sword, Car, Cog, Beaker, Zap, Wind, BookOpen, 
   Shield, GraduationCap, AlertTriangle, Building, 
-  Briefcase, Laptop, Phone, FileText, Eye
+  Briefcase, Laptop, Phone, FileText, Eye, ArrowRight
 } from 'lucide-react';
 
 const InteractiveIndustrySelector = () => {
@@ -79,7 +79,7 @@ const InteractiveIndustrySelector = () => {
       title: "Chemical Industry",
       description: "Safety compliance & process automation",
       image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80",
-      icon: <Flask size={24} className="text-white" />,
+      icon: <Beaker size={24} className="text-white" />,
       color: "#D9CB04"
     }
   ];
