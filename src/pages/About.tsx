@@ -58,19 +58,19 @@ const About = () => {
       name: "Mark T.",
       company: "Machinery Contractor",
       result: "30% more demos in just two months",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80"
+      image: "/lovable-uploads/9b3de9b6-c76c-450e-a30a-9613a5ca4e33.png"
     },
     {
       name: "Emily R.",
       company: "Local Music School Owner",
       result: "Cut student no-shows by 40% with 24/7 support",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=80"
+      image: "/lovable-uploads/a94e00f2-33c5-4440-a9cf-3c0c2f6f58a0.png"
     },
     {
       name: "David L.",
       company: "Safety Training Program",
       result: "Grew social media following by 25% with automated campaigns",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+      image: "/lovable-uploads/f302712c-2f5e-4a8f-b676-4ca700ade566.png"
     }
   ];
 
@@ -120,44 +120,52 @@ const About = () => {
     <div className="min-h-screen">
       {/* Section 1: The Hook */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        {/* Background Image with Overlay */}
+        {/* Background Image with Better Overlay */}
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80')",
+            backgroundImage: "url('/lovable-uploads/3d5e494e-a162-499b-a943-f39f4e03d854.png')",
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
         >
-          <div className="absolute inset-0 bg-black/60"></div>
+          {/* Improved overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/50"></div>
         </div>
 
-        {/* Floating Elements */}
+        {/* Floating Elements with Animation */}
         <div className="absolute top-1/4 left-1/4 animate-bounce delay-100">
-          <Phone className="h-6 w-6 text-[#2ecc71] opacity-60" />
+          <div className="text-2xl">📞</div>
         </div>
         <div className="absolute top-1/3 right-1/4 animate-bounce delay-300">
-          <MessageSquare className="h-5 w-5 text-[#D9CB04] opacity-60" />
+          <div className="text-xl">💬</div>
         </div>
         <div className="absolute bottom-1/3 left-1/3 animate-bounce delay-500">
-          <Instagram className="h-7 w-7 text-[#2ecc71] opacity-40" />
+          <div className="text-2xl">📱</div>
         </div>
         <div className="absolute bottom-1/4 right-1/3 animate-bounce delay-700">
-          <Facebook className="h-6 w-6 text-[#D9CB04] opacity-60" />
+          <div className="text-xl">📧</div>
+        </div>
+        <div className="absolute top-1/2 left-1/6 animate-bounce delay-900">
+          <div className="text-lg">💼</div>
+        </div>
+        <div className="absolute top-3/4 right-1/6 animate-bounce delay-1100">
+          <div className="text-xl">⏰</div>
         </div>
 
         <div className="container mx-auto px-4 lg:px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <h1 className="text-4xl md:text-6xl font-bold mb-8 animate-fade-in leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold mb-8 animate-fade-in leading-tight text-shadow-lg">
               You Didn't Start a Business to Get Buried in Busywork.
             </h1>
-            <div className="text-xl md:text-2xl leading-relaxed animate-fade-in space-y-6">
-              <p>
+            <div className="text-xl md:text-2xl leading-relaxed animate-fade-in space-y-6 text-shadow">
+              <p className="backdrop-blur-sm bg-black/20 rounded-lg p-6 border border-white/10">
                 The phone rings while you're with a client. A new lead fills out the form on your website. 
                 A message comes in on Facebook. Another on Instagram. By the end of the day, you've lost track 
                 of who to follow up with, your passion is drained by administrative chaos, and you're leaving money on the table.
               </p>
-              <p>
+              <p className="backdrop-blur-sm bg-black/20 rounded-lg p-6 border border-white/10">
                 This is the daily grind for millions of small business owners. You have the skill, the drive, 
                 and the vision, but you're being held back by the sheer complexity of modern client acquisition and management.
               </p>
@@ -327,13 +335,24 @@ const About = () => {
       </section>
 
       {/* Section 6: Final CTA */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 to-black text-white">
-        <div className="container mx-auto px-4 lg:px-6">
+      <section className="py-20 relative overflow-hidden">
+        {/* Background with proper contrast */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-800"></div>
+        
+        {/* Subtle pattern overlay */}
+        <div 
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        ></div>
+
+        <div className="container mx-auto px-4 lg:px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 animate-fade-in text-white">
               Ready to Automate Your Growth?
             </h2>
-            <p className="text-xl md:text-2xl mb-12 animate-fade-in">
+            <p className="text-xl md:text-2xl mb-12 animate-fade-in text-gray-200">
               Discover how GrowSnap AI can transform your business in a matter of weeks.
             </p>
             
