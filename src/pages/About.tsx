@@ -120,41 +120,33 @@ const About = () => {
     <div className="min-h-screen">
       {/* Section 1: Enhanced Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-[#2ecc71]/10 via-background to-[#D9CB04]/10 overflow-hidden">
-        {/* Floating Elements */}
-        <div className="absolute top-1/4 left-1/4 animate-bounce delay-100">
-          <div className="text-2xl">📞</div>
-        </div>
-        <div className="absolute top-1/3 right-1/4 animate-bounce delay-300">
-          <div className="text-xl">💬</div>
-        </div>
-        <div className="absolute bottom-1/3 left-1/3 animate-bounce delay-500">
-          <div className="text-2xl">📱</div>
-        </div>
-        <div className="absolute bottom-1/4 right-1/3 animate-bounce delay-700">
-          <div className="text-xl">📧</div>
-        </div>
-        <div className="absolute top-1/2 left-1/6 animate-bounce delay-900">
-          <div className="text-lg">💼</div>
-        </div>
-        <div className="absolute top-3/4 right-1/6 animate-bounce delay-1100">
-          <div className="text-xl">⏰</div>
-        </div>
-
         <div className="container mx-auto px-4 lg:px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-8 animate-fade-in leading-tight text-foreground">
-              You Didn't Start a Business to Get Buried in Busywork.
+          <div className="max-w-5xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-12 animate-fade-in leading-tight text-foreground">
+              📞 You Didn't Start a Business to Get Buried in Busywork.
             </h1>
-            <div className="text-xl md:text-2xl leading-relaxed animate-fade-in space-y-6 text-muted-foreground">
-              <p className="backdrop-blur-sm bg-background/80 rounded-lg p-6 border border-border">
-                📞 The phone rings while you're with a client. A new lead fills out the form on your website. 
-                A message comes in on Facebook. Another on Instagram. By the end of the day, you've lost track 
-                of who to follow up with, your passion is drained by administrative chaos, and you're leaving money on the table.
-              </p>
-              <p className="backdrop-blur-sm bg-background/80 rounded-lg p-6 border border-border">
-                💼 This is the daily grind for millions of small business owners. You have the skill, the drive, 
-                and the vision, but you're being held back by the sheer complexity of modern client acquisition and management.
-              </p>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+              <GlowCard className="p-8 text-left" glowColor="#2ecc71">
+                <div className="text-lg md:text-xl leading-relaxed text-muted-foreground">
+                  <div className="mb-4 text-2xl">📞💬📱</div>
+                  <p>
+                    The phone rings while you're with a client. A new lead fills out the form on your website. 
+                    A message comes in on Facebook. Another on Instagram. By the end of the day, you've lost track 
+                    of who to follow up with, your passion is drained by administrative chaos, and you're leaving money on the table.
+                  </p>
+                </div>
+              </GlowCard>
+
+              <GlowCard className="p-8 text-left" glowColor="#D9CB04">
+                <div className="text-lg md:text-xl leading-relaxed text-muted-foreground">
+                  <div className="mb-4 text-2xl">💼⚡🎯</div>
+                  <p>
+                    This is the daily grind for millions of small business owners. You have the skill, the drive, 
+                    and the vision, but you're being held back by the sheer complexity of modern client acquisition and management.
+                  </p>
+                </div>
+              </GlowCard>
             </div>
           </div>
         </div>
@@ -162,14 +154,6 @@ const About = () => {
 
       {/* Section 2: The Turning Point */}
       <section className="py-20 bg-gradient-to-br from-background via-muted/20 to-background">
-        {/* Floating Elements */}
-        <div className="absolute left-1/4 animate-bounce delay-200">
-          <div className="text-xl">💡</div>
-        </div>
-        <div className="absolute right-1/4 animate-bounce delay-600">
-          <div className="text-lg">🚀</div>
-        </div>
-
         <div className="container mx-auto px-4 lg:px-6 relative">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 animate-fade-in">
@@ -193,14 +177,6 @@ const About = () => {
 
       {/* Section 3: The Proof */}
       <section id="stats-section" className="py-20 bg-muted/30 relative overflow-hidden">
-        {/* Floating Elements */}
-        <div className="absolute top-1/4 left-1/6 animate-bounce delay-300">
-          <div className="text-xl">📊</div>
-        </div>
-        <div className="absolute bottom-1/4 right-1/6 animate-bounce delay-800">
-          <div className="text-lg">💪</div>
-        </div>
-
         <div className="container mx-auto px-4 lg:px-6 relative z-10">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-center animate-fade-in">
@@ -264,14 +240,6 @@ const About = () => {
 
       {/* Section 4: Guiding Principles */}
       <section className="py-20 relative overflow-hidden">
-        {/* Floating Elements */}
-        <div className="absolute top-1/3 left-1/5 animate-bounce delay-400">
-          <div className="text-xl">🏆</div>
-        </div>
-        <div className="absolute bottom-1/3 right-1/5 animate-bounce delay-900">
-          <div className="text-lg">🌟</div>
-        </div>
-
         <div className="container mx-auto px-4 lg:px-6 relative z-10">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-12 text-center animate-fade-in">
@@ -300,14 +268,6 @@ const About = () => {
 
       {/* Section 5: Founder's Note */}
       <section className="py-20 bg-muted/30 relative overflow-hidden">
-        {/* Floating Elements */}
-        <div className="absolute top-1/4 left-1/6 animate-bounce delay-500">
-          <div className="text-xl">👨‍💼</div>
-        </div>
-        <div className="absolute bottom-1/4 right-1/6 animate-bounce delay-1000">
-          <div className="text-lg">✨</div>
-        </div>
-
         <div className="container mx-auto px-4 lg:px-6 relative z-10">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-12 text-center animate-fade-in">
@@ -354,14 +314,6 @@ const About = () => {
 
       {/* Section 6: Final CTA */}
       <section className="py-20 bg-gradient-to-br from-[#2ecc71]/10 via-background to-[#D9CB04]/10 relative overflow-hidden">
-        {/* Floating Elements */}
-        <div className="absolute top-1/4 left-1/6 animate-bounce delay-600">
-          <div className="text-xl">🚀</div>
-        </div>
-        <div className="absolute bottom-1/4 right-1/6 animate-bounce delay-1100">
-          <div className="text-lg">💰</div>
-        </div>
-
         <div className="container mx-auto px-4 lg:px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 animate-fade-in text-foreground">
