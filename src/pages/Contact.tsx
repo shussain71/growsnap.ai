@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Phone, Mail, MapPin, Clock, MessageSquare, TrendingUp, Globe, Zap, DollarSign, Shield, Users } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, MessageSquare, Globe, Zap, DollarSign, Shield, Users } from 'lucide-react';
 import GlowCard from '@/components/ui/GlowCard';
 import {
   Accordion,
@@ -44,7 +44,7 @@ const Contact = () => {
   ];
 
   const companyStats = [
-    { label: "Average ROI", value: "< 150%", icon: TrendingUp },
+    { label: "Average ROI", value: "< 150%", icon: DollarSign },
     { label: "Global Business Trust Us", value: "600+", icon: Globe },
     { label: "Success Rate", value: "98.9%", icon: Zap },
     { label: "Response Time", value: "24/7", icon: Clock },
@@ -131,13 +131,13 @@ const Contact = () => {
                   {contactInfo.map((info, index) => (
                     <GlowCard 
                       key={index} 
-                      className="flex items-start space-x-4 p-4 transition-all duration-300 hover:scale-105 cursor-pointer"
+                      className="flex items-center space-x-4 p-4 transition-all duration-300 hover:scale-105 cursor-pointer"
                       glowColor="#2ecc71"
                     >
                       <div className="flex-shrink-0 w-12 h-12 bg-[#2ecc71]/10 rounded-lg flex items-center justify-center">
                         <info.icon className="h-6 w-6 text-[#2ecc71]" />
                       </div>
-                      <div>
+                      <div className="flex-1">
                         <h3 className="font-semibold text-foreground mb-1">{info.title}</h3>
                         {info.link ? (
                           <a 
@@ -161,7 +161,7 @@ const Contact = () => {
                 <GlowCard className="bg-card border border-border rounded-2xl p-8 transition-all duration-300 hover:scale-105" glowColor="#2ecc71">
                   <iframe
                     src="https://api.leadconnectorhq.com/widget/form/ezyqCRa4we8djKIXqoss"
-                    style={{width:'100%',height:'100%',border:'none',borderRadius:'4px'}}
+                    style={{width:'100%',height:'auto',minHeight:'400px',border:'none',borderRadius:'4px'}}
                     id="inline-ezyqCRa4we8djKIXqoss" 
                     data-layout="{'id':'INLINE'}"
                     data-trigger-type="alwaysShow"
@@ -175,7 +175,29 @@ const Contact = () => {
                     data-layout-iframe-id="inline-ezyqCRa4we8djKIXqoss"
                     data-form-id="ezyqCRa4we8djKIXqoss"
                     title="Niche Detection Form"
-                    className="w-full h-96 border-0 rounded-lg"
+                    className="w-full border-0 rounded-lg"
+                    onLoad={(e) => {
+                      // Allow the iframe to resize dynamically
+                      const iframe = e.target as HTMLIFrameElement;
+                      const resizeObserver = new ResizeObserver(() => {
+                        try {
+                          if (iframe.contentDocument) {
+                            const height = iframe.contentDocument.body.scrollHeight;
+                            iframe.style.height = `${Math.max(height, 400)}px`;
+                          }
+                        } catch (error) {
+                          // Handle cross-origin restrictions gracefully
+                          console.log('Form will resize automatically');
+                        }
+                      });
+                      
+                      // Listen for messages from the iframe for height updates
+                      window.addEventListener('message', (event) => {
+                        if (event.data && event.data.type === 'resize' && event.data.height) {
+                          iframe.style.height = `${Math.max(event.data.height, 400)}px`;
+                        }
+                      });
+                    }}
                   />
                   <script src="https://link.msgsndr.com/js/form_embed.js"></script>
                 </GlowCard>
