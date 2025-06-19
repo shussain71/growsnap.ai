@@ -120,6 +120,13 @@ const About = () => {
     <div className="min-h-screen">
       {/* Section 1: Enhanced Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-[#2ecc71]/10 via-background to-[#D9CB04]/10 overflow-hidden">
+        {/* Floating Icons */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <Phone className="absolute top-20 left-[10%] h-8 w-8 text-[#2ecc71]/30 animate-bounce" style={{animationDelay: '0s'}} />
+          <MessageSquare className="absolute top-32 right-[15%] h-10 w-10 text-[#D9CB04]/40 animate-bounce" style={{animationDelay: '1s'}} />
+          <Target className="absolute bottom-40 left-[20%] h-12 w-12 text-[#2ecc71]/25 animate-bounce" style={{animationDelay: '2s'}} />
+        </div>
+
         <div className="container mx-auto px-4 lg:px-6 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-12 animate-fade-in leading-tight text-foreground">
