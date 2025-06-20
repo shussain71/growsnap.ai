@@ -131,7 +131,7 @@ const Contact = () => {
                   {contactInfo.map((info, index) => (
                     <GlowCard 
                       key={index} 
-                      className="flex items-center space-x-4 p-6 transition-all duration-300 hover:scale-105 cursor-pointer"
+                      className="flex items-start space-x-4 p-6 transition-all duration-300 hover:scale-105 cursor-pointer"
                       glowColor="#2ecc71"
                     >
                       <div className="flex-shrink-0 w-12 h-12 bg-[#2ecc71]/10 rounded-lg flex items-center justify-center">
@@ -159,10 +159,10 @@ const Contact = () => {
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-8">Send us a Message</h2>
                 <GlowCard className="bg-card border border-border rounded-2xl p-8 transition-all duration-300 hover:scale-105" glowColor="#2ecc71">
-                  <iframe 
-                    src="https://api.leadconnectorhq.com/widget/form/66f6ad4b5cf2b739c4041234" 
-                    style={{width: '100%', height: '100%', border: 'none', borderRadius: '3px'}} 
-                    id="inline-66f6ad4b5cf2b739c4041234" 
+                  <iframe
+                    src="https://api.leadconnectorhq.com/widget/form/pt4hp3CyOPxcOC9YPei9"
+                    style={{width:'100%',height:'100%',border:'none',borderRadius:'4px'}}
+                    id="inline-pt4hp3CyOPxcOC9YPei9" 
                     data-layout="{'id':'INLINE'}"
                     data-trigger-type="alwaysShow"
                     data-trigger-value=""
@@ -170,12 +170,12 @@ const Contact = () => {
                     data-activation-value=""
                     data-deactivation-type="neverDeactivate"
                     data-deactivation-value=""
-                    data-form-name="Contact Us (Website)"
-                    data-height="657"
-                    data-layout-iframe-id="inline-66f6ad4b5cf2b739c4041234"
-                    data-form-id="66f6ad4b5cf2b739c4041234"
-                    title="Contact Us (Website)"
-                    className="min-h-[657px]"
+                    data-form-name="GrowSnap AI Discovery Form"
+                    data-height="679"
+                    data-layout-iframe-id="inline-pt4hp3CyOPxcOC9YPei9"
+                    data-form-id="pt4hp3CyOPxcOC9YPei9"
+                    title="GrowSnap AI Discovery Form"
+                    className="min-h-[679px]"
                   />
                   <script src="https://link.msgsndr.com/js/form_embed.js"></script>
                 </GlowCard>
