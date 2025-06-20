@@ -1,7 +1,7 @@
+
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, MessageSquare, Globe, Zap, DollarSign, Shield, Users } from 'lucide-react';
 import GlowCard from '@/components/ui/GlowCard';
-import ExpandableContactForm from '@/components/ui/ExpandableContactForm';
 import {
   Accordion,
   AccordionContent,
@@ -134,20 +134,20 @@ const Contact = () => {
                       className="flex items-center space-x-4 p-6 transition-all duration-300 hover:scale-105 cursor-pointer"
                       glowColor="#2ecc71"
                     >
-                      <div className="flex-shrink-0 w-16 h-16 bg-[#2ecc71]/10 rounded-lg flex items-center justify-center">
-                        <info.icon className="h-8 w-8 text-[#2ecc71]" />
+                      <div className="flex-shrink-0 w-12 h-12 bg-[#2ecc71]/10 rounded-lg flex items-center justify-center">
+                        <info.icon className="h-6 w-6 text-[#2ecc71]" />
                       </div>
-                      <div className="flex-1 min-w-0">
-                        <h3 className="font-semibold text-foreground mb-2 text-lg">{info.title}</h3>
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-foreground mb-1">{info.title}</h3>
                         {info.link ? (
                           <a 
                             href={info.link}
-                            className="text-muted-foreground hover:text-[#2ecc71] transition-colors text-base break-words"
+                            className="text-muted-foreground hover:text-[#2ecc71] transition-colors"
                           >
                             {info.details}
                           </a>
                         ) : (
-                          <p className="text-muted-foreground text-base">{info.details}</p>
+                          <p className="text-muted-foreground">{info.details}</p>
                         )}
                       </div>
                     </GlowCard>
@@ -159,7 +159,25 @@ const Contact = () => {
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-8">Send us a Message</h2>
                 <GlowCard className="bg-card border border-border rounded-2xl p-8 transition-all duration-300 hover:scale-105" glowColor="#2ecc71">
-                  <ExpandableContactForm />
+                  <iframe 
+                    src="https://api.leadconnectorhq.com/widget/form/66f6ad4b5cf2b739c4041234" 
+                    style={{width: '100%', height: '100%', border: 'none', borderRadius: '3px'}} 
+                    id="inline-66f6ad4b5cf2b739c4041234" 
+                    data-layout="{'id':'INLINE'}"
+                    data-trigger-type="alwaysShow"
+                    data-trigger-value=""
+                    data-activation-type="alwaysActivated"
+                    data-activation-value=""
+                    data-deactivation-type="neverDeactivate"
+                    data-deactivation-value=""
+                    data-form-name="Contact Us (Website)"
+                    data-height="657"
+                    data-layout-iframe-id="inline-66f6ad4b5cf2b739c4041234"
+                    data-form-id="66f6ad4b5cf2b739c4041234"
+                    title="Contact Us (Website)"
+                    className="min-h-[657px]"
+                  />
+                  <script src="https://link.msgsndr.com/js/form_embed.js"></script>
                 </GlowCard>
               </div>
             </div>
