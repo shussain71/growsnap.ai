@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, MessageSquare, Globe, Zap, DollarSign, Shield, Users } from 'lucide-react';
 import GlowCard from '@/components/ui/GlowCard';
@@ -44,7 +43,7 @@ const Contact = () => {
   ];
 
   const companyStats = [
-    { label: "Average ROI", value: "< 150%", icon: DollarSign },
+    { label: "Average ROI", value: "150%", icon: DollarSign },
     { label: "Global Business Trust Us", value: "600+", icon: Globe },
     { label: "Success Rate", value: "98.9%", icon: Zap },
     { label: "Response Time", value: "24/7", icon: Clock },
