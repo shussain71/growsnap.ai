@@ -131,23 +131,23 @@ const Contact = () => {
                   {contactInfo.map((info, index) => (
                     <GlowCard 
                       key={index} 
-                      className="flex items-center space-x-4 p-4 transition-all duration-300 hover:scale-105 cursor-pointer"
+                      className="flex items-center space-x-4 p-6 transition-all duration-300 hover:scale-105 cursor-pointer"
                       glowColor="#2ecc71"
                     >
-                      <div className="flex-shrink-0 w-12 h-12 bg-[#2ecc71]/10 rounded-lg flex items-center justify-center">
-                        <info.icon className="h-6 w-6 text-[#2ecc71]" />
+                      <div className="flex-shrink-0 w-16 h-16 bg-[#2ecc71]/10 rounded-lg flex items-center justify-center">
+                        <info.icon className="h-8 w-8 text-[#2ecc71]" />
                       </div>
-                      <div className="flex-1">
-                        <h3 className="font-semibold text-foreground mb-1">{info.title}</h3>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-semibold text-foreground mb-2 text-lg">{info.title}</h3>
                         {info.link ? (
                           <a 
                             href={info.link}
-                            className="text-muted-foreground hover:text-[#2ecc71] transition-colors"
+                            className="text-muted-foreground hover:text-[#2ecc71] transition-colors text-base break-words"
                           >
                             {info.details}
                           </a>
                         ) : (
-                          <p className="text-muted-foreground">{info.details}</p>
+                          <p className="text-muted-foreground text-base">{info.details}</p>
                         )}
                       </div>
                     </GlowCard>
@@ -161,7 +161,7 @@ const Contact = () => {
                 <GlowCard className="bg-card border border-border rounded-2xl p-8 transition-all duration-300 hover:scale-105" glowColor="#2ecc71">
                   <iframe
                     src="https://api.leadconnectorhq.com/widget/form/ezyqCRa4we8djKIXqoss"
-                    style={{width:'100%',height:'auto',minHeight:'400px',border:'none',borderRadius:'4px'}}
+                    style={{width:'100%',height:'100%',border:'none',borderRadius:'4px'}}
                     id="inline-ezyqCRa4we8djKIXqoss" 
                     data-layout="{'id':'INLINE'}"
                     data-trigger-type="alwaysShow"
@@ -175,29 +175,7 @@ const Contact = () => {
                     data-layout-iframe-id="inline-ezyqCRa4we8djKIXqoss"
                     data-form-id="ezyqCRa4we8djKIXqoss"
                     title="Niche Detection Form"
-                    className="w-full border-0 rounded-lg"
-                    onLoad={(e) => {
-                      // Allow the iframe to resize dynamically
-                      const iframe = e.target as HTMLIFrameElement;
-                      const resizeObserver = new ResizeObserver(() => {
-                        try {
-                          if (iframe.contentDocument) {
-                            const height = iframe.contentDocument.body.scrollHeight;
-                            iframe.style.height = `${Math.max(height, 400)}px`;
-                          }
-                        } catch (error) {
-                          // Handle cross-origin restrictions gracefully
-                          console.log('Form will resize automatically');
-                        }
-                      });
-                      
-                      // Listen for messages from the iframe for height updates
-                      window.addEventListener('message', (event) => {
-                        if (event.data && event.data.type === 'resize' && event.data.height) {
-                          iframe.style.height = `${Math.max(event.data.height, 400)}px`;
-                        }
-                      });
-                    }}
+                    className="w-full h-[800px] border-0 rounded-lg"
                   />
                   <script src="https://link.msgsndr.com/js/form_embed.js"></script>
                 </GlowCard>
