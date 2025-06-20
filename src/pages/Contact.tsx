@@ -1,6 +1,7 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, MessageSquare, Globe, Zap, DollarSign, Shield, Users } from 'lucide-react';
 import GlowCard from '@/components/ui/GlowCard';
+import ExpandableContactForm from '@/components/ui/ExpandableContactForm';
 import {
   Accordion,
   AccordionContent,
@@ -158,25 +159,7 @@ const Contact = () => {
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-8">Send us a Message</h2>
                 <GlowCard className="bg-card border border-border rounded-2xl p-8 transition-all duration-300 hover:scale-105" glowColor="#2ecc71">
-                  <iframe
-                    src="https://api.leadconnectorhq.com/widget/form/ezyqCRa4we8djKIXqoss"
-                    style={{width:'100%',height:'100%',border:'none',borderRadius:'4px'}}
-                    id="inline-ezyqCRa4we8djKIXqoss" 
-                    data-layout="{'id':'INLINE'}"
-                    data-trigger-type="alwaysShow"
-                    data-trigger-value=""
-                    data-activation-type="alwaysActivated"
-                    data-activation-value=""
-                    data-deactivation-type="neverDeactivate"
-                    data-deactivation-value=""
-                    data-form-name="Niche Detection Form"
-                    data-height="778"
-                    data-layout-iframe-id="inline-ezyqCRa4we8djKIXqoss"
-                    data-form-id="ezyqCRa4we8djKIXqoss"
-                    title="Niche Detection Form"
-                    className="w-full h-[800px] border-0 rounded-lg"
-                  />
-                  <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+                  <ExpandableContactForm />
                 </GlowCard>
               </div>
             </div>
