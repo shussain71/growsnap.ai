@@ -13,8 +13,8 @@ const StatsBar = () => {
   return (
     <section className="py-6 bg-muted/30 border-t border-b border-border overflow-hidden">
       <div className="relative">
-        {/* Infinite scrolling container */}
-        <div className="flex animate-scroll-left whitespace-nowrap">
+        {/* Infinite scrolling container - faster animation on mobile */}
+        <div className="flex animate-scroll-left-mobile md:animate-scroll-left whitespace-nowrap">
           {/* First set */}
           {stats.map((stat, index) => (
             <div key={`first-${index}`} className="flex items-center space-x-3 mx-12 flex-shrink-0">

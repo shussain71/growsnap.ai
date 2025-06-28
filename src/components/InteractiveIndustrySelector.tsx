@@ -117,8 +117,61 @@ const InteractiveIndustrySelector = () => {
         </p>
       </div>
 
-      {/* Interactive Options Container */}
-      <div className="flex w-full max-w-[1000px] mx-auto h-[400px] items-stretch overflow-hidden relative rounded-xl">
+      {/* Mobile: Grid Layout */}
+      <div className="block md:hidden mb-8">
+        <div className="grid grid-cols-2 gap-4">
+          {industries.map((industry, index) => (
+            <div
+              key={index}
+              className={`
+                relative bg-cover bg-center rounded-lg p-4 h-32 transition-all duration-300 cursor-pointer
+                ${activeIndex === index ? 'ring-2 ring-[#2ecc71] scale-105' : ''}
+              `}
+              style={{
+                backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('${industry.image}')`,
+                opacity: animatedOptions.includes(index) ? 1 : 0,
+                transform: `${animatedOptions.includes(index) ? 'translateY(0)' : 'translateY(20px)'} ${activeIndex === index ? 'scale(1.05)' : 'scale(1)'}`
+              }}
+              onClick={() => handleOptionClick(index)}
+            >
+              <div className="flex flex-col items-center justify-center h-full text-center">
+                <div 
+                  className="w-10 h-10 flex items-center justify-center rounded-full mb-2"
+                  style={{ 
+                    backgroundColor: `${industry.color}30`,
+                    border: `2px solid ${industry.color}`
+                  }}
+                >
+                  {React.cloneElement(industry.icon, { size: 20 })}
+                </div>
+                <h3 className="text-white font-semibold text-sm leading-tight">{industry.title}</h3>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        {/* Active Industry Details for Mobile */}
+        <div className="mt-6 p-6 bg-background/80 backdrop-blur-sm rounded-lg border border-border">
+          <div className="flex items-center gap-4 mb-3">
+            <div 
+              className="w-12 h-12 flex items-center justify-center rounded-full"
+              style={{ 
+                backgroundColor: `${industries[activeIndex].color}20`,
+                border: `2px solid ${industries[activeIndex].color}`
+              }}
+            >
+              {industries[activeIndex].icon}
+            </div>
+            <div>
+              <h3 className="text-lg font-bold text-foreground">{industries[activeIndex].title}</h3>
+              <p className="text-sm text-muted-foreground">{industries[activeIndex].description}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop: Interactive Options Container */}
+      <div className="hidden md:flex w-full max-w-[1000px] mx-auto h-[400px] items-stretch overflow-hidden relative rounded-xl">
         {industries.map((industry, index) => (
           <div
             key={index}

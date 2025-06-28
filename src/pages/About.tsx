@@ -81,7 +81,7 @@ const About = () => {
           if (entry.isIntersecting && !animatedStats) {
             setAnimatedStats(true);
             
-            // Animate numbers
+            // Animate numbers with mobile-optimized timing
             const duration = 2000;
             const steps = 60;
             const stepTime = duration / steps;
@@ -105,7 +105,10 @@ const About = () => {
           }
         });
       },
-      { threshold: 0.5 }
+      { 
+        threshold: window.innerWidth < 768 ? 0.3 : 0.5, // Lower threshold for mobile
+        rootMargin: '50px' // Trigger earlier on mobile
+      }
     );
 
     const statsSection = document.getElementById('stats-section');
