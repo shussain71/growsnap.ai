@@ -72,26 +72,26 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-[#2ecc71]/10 via-background to-[#D9CB04]/10 relative overflow-hidden">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-[#2ecc71]/10 via-background to-[#D9CB04]/10 relative overflow-hidden">
         {/* Floating Icons */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <Phone className="absolute top-20 left-[10%] h-8 w-8 text-[#2ecc71]/30 animate-bounce" style={{animationDelay: '0s'}} />
-          <Mail className="absolute top-32 right-[15%] h-10 w-10 text-[#D9CB04]/40 animate-bounce" style={{animationDelay: '1s'}} />
-          <MessageSquare className="absolute bottom-40 left-[20%] h-12 w-12 text-[#2ecc71]/25 animate-bounce" style={{animationDelay: '2s'}} />
-          <MapPin className="absolute top-40 right-[25%] h-6 w-6 text-[#D9CB04]/30 animate-bounce" style={{animationDelay: '0.5s'}} />
-          <Clock className="absolute bottom-60 right-[10%] h-8 w-8 text-[#2ecc71]/35 animate-bounce" style={{animationDelay: '1.5s'}} />
+          <Phone className="absolute top-20 left-[10%] h-6 w-6 md:h-8 md:w-8 text-[#2ecc71]/30 animate-bounce" style={{animationDelay: '0s'}} />
+          <Mail className="absolute top-32 right-[15%] h-8 w-8 md:h-10 md:w-10 text-[#D9CB04]/40 animate-bounce" style={{animationDelay: '1s'}} />
+          <MessageSquare className="absolute bottom-40 left-[20%] h-10 w-10 md:h-12 md:w-12 text-[#2ecc71]/25 animate-bounce" style={{animationDelay: '2s'}} />
+          <MapPin className="absolute top-40 right-[25%] h-4 w-4 md:h-6 md:w-6 text-[#D9CB04]/30 animate-bounce" style={{animationDelay: '0.5s'}} />
+          <Clock className="absolute bottom-60 right-[10%] h-6 w-6 md:h-8 md:w-8 text-[#2ecc71]/35 animate-bounce" style={{animationDelay: '1.5s'}} />
         </div>
 
         <div className="container mx-auto px-4 lg:px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-[#2ecc71]/10 px-4 py-2 rounded-full mb-6 animate-fade-in">
-              <MessageSquare className="h-5 w-5 text-[#2ecc71]" />
-              <span className="text-[#2ecc71] font-semibold">Let's Connect</span>
+            <div className="inline-flex items-center gap-2 bg-[#2ecc71]/10 px-3 py-2 md:px-4 md:py-2 rounded-full mb-4 md:mb-6 animate-fade-in">
+              <MessageSquare className="h-4 w-4 md:h-5 md:w-5 text-[#2ecc71]" />
+              <span className="text-[#2ecc71] font-semibold text-sm md:text-base">Let's Connect</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 animate-fade-in">
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-foreground mb-4 md:mb-6 animate-fade-in">
               Get in Touch with GrowSnap AI
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 animate-fade-in">
+            <p className="text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 animate-fade-in px-4">
               We're here to help! Reach out with any questions, and our team will respond within 24 hours.
             </p>
           </div>
@@ -99,20 +99,20 @@ const Contact = () => {
       </section>
 
       {/* Company Stats Section */}
-      <section className="py-16 -mt-10 relative z-10">
+      <section className="py-12 md:py-16 -mt-6 md:-mt-10 relative z-10">
         <div className="container mx-auto px-4 lg:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
             {companyStats.map((stat, index) => (
               <GlowCard 
                 key={index} 
-                className="p-6 text-center shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer" 
+                className="p-4 md:p-6 text-center shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer" 
                 glowColor="#2ecc71"
               >
-                <div className="w-16 h-16 bg-[#2ecc71]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="h-8 w-8 text-[#2ecc71]" />
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-[#2ecc71]/10 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
+                  <stat.icon className="h-6 w-6 md:h-8 md:w-8 text-[#2ecc71]" />
                 </div>
-                <div className="text-2xl font-bold text-foreground mb-1">{stat.value}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
+                <div className="text-xl md:text-2xl font-bold text-foreground mb-1">{stat.value}</div>
+                <div className="text-xs md:text-sm text-muted-foreground">{stat.label}</div>
               </GlowCard>
             ))}
           </div>
@@ -120,34 +120,34 @@ const Contact = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20">
+      <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 lg:px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
               {/* Contact Information */}
               <div>
-                <h2 className="text-3xl font-bold text-foreground mb-8">Contact Information</h2>
-                <div className="space-y-6">
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 md:mb-8">Contact Information</h2>
+                <div className="space-y-4 md:space-y-6">
                   {contactInfo.map((info, index) => (
                     <GlowCard 
                       key={index} 
-                      className="flex items-start space-x-4 p-6 transition-all duration-300 hover:scale-105 cursor-pointer"
+                      className="flex items-center space-x-4 p-4 md:p-6 transition-all duration-300 hover:scale-105 cursor-pointer"
                       glowColor="#2ecc71"
                     >
-                      <div className="flex-shrink-0 w-12 h-12 bg-[#2ecc71]/10 rounded-lg flex items-center justify-center">
-                        <info.icon className="h-6 w-6 text-[#2ecc71]" />
+                      <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-[#2ecc71]/10 rounded-lg flex items-center justify-center">
+                        <info.icon className="h-5 w-5 md:h-6 md:w-6 text-[#2ecc71]" />
                       </div>
-                      <div className="flex-1">
-                        <h3 className="font-semibold text-foreground mb-1">{info.title}</h3>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-semibold text-foreground mb-1 text-sm md:text-base">{info.title}</h3>
                         {info.link ? (
                           <a 
                             href={info.link}
-                            className="text-muted-foreground hover:text-[#2ecc71] transition-colors"
+                            className="text-muted-foreground hover:text-[#2ecc71] transition-colors text-sm md:text-base break-words"
                           >
                             {info.details}
                           </a>
                         ) : (
-                          <p className="text-muted-foreground">{info.details}</p>
+                          <p className="text-muted-foreground text-sm md:text-base">{info.details}</p>
                         )}
                       </div>
                     </GlowCard>
@@ -157,8 +157,8 @@ const Contact = () => {
 
               {/* Contact Form */}
               <div>
-                <h2 className="text-3xl font-bold text-foreground mb-8">Send us a Message</h2>
-                <GlowCard className="bg-card border border-border rounded-2xl p-8 transition-all duration-300 hover:scale-105" glowColor="#2ecc71">
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 md:mb-8">Send us a Message</h2>
+                <GlowCard className="bg-card border border-border rounded-2xl p-4 md:p-8 transition-all duration-300 hover:scale-105" glowColor="#2ecc71">
                   <iframe
                     src="https://api.leadconnectorhq.com/widget/form/pt4hp3CyOPxcOC9YPei9"
                     style={{width:'100%',height:'100%',border:'none',borderRadius:'4px'}}
@@ -175,7 +175,7 @@ const Contact = () => {
                     data-layout-iframe-id="inline-pt4hp3CyOPxcOC9YPei9"
                     data-form-id="pt4hp3CyOPxcOC9YPei9"
                     title="GrowSnap AI Discovery Form"
-                    className="min-h-[679px]"
+                    className="min-h-[500px] md:min-h-[679px]"
                   />
                   <script src="https://link.msgsndr.com/js/form_embed.js"></script>
                 </GlowCard>
@@ -186,13 +186,13 @@ const Contact = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-16 md:py-20 bg-muted/30">
         <div className="container mx-auto px-4 lg:px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg md:text-xl text-muted-foreground px-4">
               Get answers to common questions about GrowSnap AI
             </p>
           </div>
@@ -203,12 +203,12 @@ const Contact = () => {
                 <AccordionItem 
                   key={index} 
                   value={`item-${index}`}
-                  className="bg-background rounded-lg border border-border px-6 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="bg-background rounded-lg border border-border px-4 md:px-6 transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 >
-                  <AccordionTrigger className="text-left hover:text-[#2ecc71] transition-colors">
+                  <AccordionTrigger className="text-left hover:text-[#2ecc71] transition-colors text-sm md:text-base">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed">
+                  <AccordionContent className="text-muted-foreground leading-relaxed text-sm md:text-base">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

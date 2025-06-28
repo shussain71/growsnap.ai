@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { Menu, X, Sun, Moon, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface HeaderProps {
@@ -24,23 +24,23 @@ const Header = ({ isDarkMode, toggleDarkMode }: HeaderProps) => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 lg:px-6">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-14 md:h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
               src="/lovable-uploads/50d85754-c21d-4c6d-9565-a209cfe28c50.png" 
               alt="GrowSnap AI" 
-              className="h-10 w-auto"
+              className="h-8 md:h-10 w-auto"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
                 to={link.href}
-                className="text-foreground hover:text-[#2ecc71] transition-colors duration-200 font-medium"
+                className="text-foreground hover:text-[#2ecc71] transition-colors duration-200 font-medium text-sm xl:text-base"
               >
                 {link.label}
               </Link>
@@ -48,7 +48,7 @@ const Header = ({ isDarkMode, toggleDarkMode }: HeaderProps) => {
           </nav>
 
           {/* Right side controls */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 md:space-x-4">
             {/* Dark mode toggle */}
             <Button
               variant="ghost"
@@ -62,9 +62,10 @@ const Header = ({ isDarkMode, toggleDarkMode }: HeaderProps) => {
             {/* CTA Button */}
             <Button
               asChild
-              className="hidden lg:inline-flex bg-[#2ecc71] hover:bg-[#27ae60] text-white px-6 py-2 rounded-lg font-semibold transition-all duration-200 hover:shadow-lg hover:shadow-[#2ecc71]/25"
+              className="hidden lg:inline-flex bg-[#2ecc71] hover:bg-[#27ae60] text-white px-4 xl:px-6 py-2 rounded-lg font-semibold transition-all duration-200 hover:shadow-lg hover:shadow-[#2ecc71]/25 text-sm xl:text-base"
             >
-              <a href="https://api.leadconnectorhq.com/widget/booking/mcyJevtz5l0UMpAH13ft" target="_blank" rel="noopener noreferrer">
+              <a href="https://api.leadconnectorhq.com/widget/booking/mcyJevtz5l0UMpAH13ft" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <Calendar className="h-4 w-4" />
                 Book Demo
               </a>
             </Button>
@@ -89,7 +90,7 @@ const Header = ({ isDarkMode, toggleDarkMode }: HeaderProps) => {
                 <Link
                   key={link.label}
                   to={link.href}
-                  className="block text-foreground hover:text-[#2ecc71] transition-colors duration-200 font-medium py-2"
+                  className="block text-foreground hover:text-[#2ecc71] transition-colors duration-200 font-medium py-2 text-base"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}
@@ -99,7 +100,8 @@ const Header = ({ isDarkMode, toggleDarkMode }: HeaderProps) => {
                 asChild
                 className="w-full bg-[#2ecc71] hover:bg-[#27ae60] text-white mt-4"
               >
-                <a href="https://api.leadconnectorhq.com/widget/booking/mcyJevtz5l0UMpAH13ft" target="_blank" rel="noopener noreferrer">
+                <a href="https://api.leadconnectorhq.com/widget/booking/mcyJevtz5l0UMpAH13ft" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                  <Calendar className="h-4 w-4" />
                   Book Demo
                 </a>
               </Button>
