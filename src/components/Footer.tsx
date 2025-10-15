@@ -50,7 +50,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link to="/about" className="text-muted-foreground hover:text-[#2ecc71] transition-colors text-xs md:text-sm">About Us</Link></li>
               <li><Link to="/solutions" className="text-muted-foreground hover:text-[#2ecc71] transition-colors text-xs md:text-sm">Demos</Link></li>
-              <li><a href="https://growsnap.ai/home--music-schools-affiliate-signup-page" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-[#2ecc71] transition-colors text-xs md:text-sm">Affiliate</a></li>
+              <li><a href="https://growsnap.ai/global-affiliate-page" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-[#2ecc71] transition-colors text-xs md:text-sm">Affiliate</a></li>
             </ul>
           </div>
 
